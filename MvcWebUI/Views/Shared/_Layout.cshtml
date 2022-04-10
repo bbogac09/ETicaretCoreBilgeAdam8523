@@ -19,13 +19,13 @@
                     <a class="a-sidebar" href="#"> Ürünler</a>
                 </li>
                 <li class="nav-item">
-                    <a class="a-sidebar" href="#"> Kategoriler</a>
+                    <a class="a-sidebar" asp-action="Index" asp-controller="Kategoriler"> href="#"> Kategoriler</a>
                 </li>
             </ul>
             <ul class="list-unstyled admin">
                 <p>Admin</p>
                 <li class="nav-item">
-                    <a class="a-navbar" href="#"> Verileri Sıfırla</a>
+                    <a class="a-navbar" asp-action="Seed" asp-controller="Database"> href="#"> Verileri Sıfırla</a>
                 </li>
             </ul>
         </nav>

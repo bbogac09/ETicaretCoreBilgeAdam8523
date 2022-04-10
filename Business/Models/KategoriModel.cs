@@ -1,9 +1,9 @@
 ﻿using AppCore.Records.Bases;
 using System.ComponentModel.DataAnnotations;
 
-namespace DataAccess.Entities
+namespace Business.Models
 {
-    public class Kategori : RecordBase
+    public class KategoriModel : RecordBase
     {
         [Required]
         [StringLength(100)]
@@ -11,6 +11,5 @@ namespace DataAccess.Entities
 
         public string Aciklamasi { get; set; }
 
-        public List<Urun> Urunler { get; set; }
     }
 }

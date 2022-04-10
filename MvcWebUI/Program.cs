@@ -1,7 +1,18 @@
+using Business.Services;
+using Business.Services.Bases;
+using DataAccess.Repositories;
+using DataAccess.Repositories.Bases;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//IoC Container: Inversion of Control Container: baðýmlýlýklarýn yönetimi
+//builder.Services.AddScoped<KategoriRepoBase, KategoriRepo>();
+builder.Services.AddScoped<IKategoriService, KategoriService>();
+//builder.Services.AddSingleton<IKategoriService, KategoriService>();
+//builder.Services.AddTransient<IKategoriService, KategoriService>();
 
 var app = builder.Build();
 

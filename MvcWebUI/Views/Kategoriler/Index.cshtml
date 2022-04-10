@@ -1,0 +1,39 @@
+﻿@model List<KategoriModel>
+<h2>Kategoriler</h2>
+
+<p>
+    <a asp-action="OlusturGetir">Yeni Kategori</a>
+</p>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Adı
+            </th>
+            <th>
+                Açıklaması
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (KategoriModel kategori in Model)
+        {
+            <tr>
+                <td>
+                    @kategori.Adi
+                </td>
+                <td>
+                    @kategori.Aciklamasi
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@kategori.Id">Düzenle</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -7,11 +7,11 @@ namespace AppCore.DataAccess.EntityFramework.Bases
     {
         TDbContext DbContext { get; set; }
         IQueryable<TEntity> Query(params string[] entitiesToInclude); // read
-        IQueryable<TEntity> Query(Expression<Func<TEntity, bool>> predicate);
+        IQueryable<TEntity> Query(Expression<Func<TEntity, bool>> predicate, params string[] entitiesToInclude);
         void Add(TEntity entity, bool save = true); // create
         void Update(TEntity entity, bool save = true); // update
         void Delete(TEntity entity, bool save = true); // delete
         void Delete(Expression<Func<TEntity, bool>> predicate, bool save = true);
-        int save();
+        int Save();
     }
 }

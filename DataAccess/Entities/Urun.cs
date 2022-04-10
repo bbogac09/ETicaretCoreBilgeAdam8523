@@ -1,8 +1,10 @@
 ﻿using AppCore.Records.Bases;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace DataAccess.Entities
 {
+    //[Table("ETicaretUrunler")]
     public class Urun : RecordBase
     {
         [Required]
