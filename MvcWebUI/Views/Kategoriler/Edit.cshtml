@@ -21,8 +21,11 @@
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="row mb-3">
 
-                @* @Html.Label("Adi", "Adı", new {@class = "col-2 co-form-label"})
-                    @Html.LabelFor(m => m.Adi, new {@class = "col-2 co-form-label"})*@
+                @* @Html.Label("Adi", "Adı", new {@class = "col-2 col-form-label"})
+                    @Html.LabelFor(m => m.Adi, new {@class = "col-2 col-form-label"})*@
+
+@*                    @Model.Adi
+                    @Html.DisplayFor*@/
 
                 <label asp-for="Adi" class="col-2 col-form-label"></label>
 
